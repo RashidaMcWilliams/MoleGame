@@ -28,7 +28,7 @@
     });
 
     function startGame(){
-        //make game board
+        makeGameBoard();
         score=0;
         $('.score').text(score);
         //start gameplay
@@ -41,6 +41,18 @@
     function gameend(){
       gameover = true;
       $('.message').html('GAME OVER');
+    }
+    
+    function makeGameBoard(){
+       
+        var moles = 8;
+        var html = '';
+        for(var mole=0;mole>moles;mole++){
+            html
+        }
+        
+        $('.game').html(html);
+        
     }
 
 </script>
