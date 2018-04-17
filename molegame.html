@@ -4,7 +4,39 @@
     <meta charset="UTF-8">
     <title>Mole Game</title>
     <style>
-
+        .game{
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .hole{
+            display: inline-block;
+            margin: 10px;
+            width: 20%;
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+        .dirt{
+            background-image: url(images/dirt.sm.jpeg);
+            background-size: cover;
+            z-index: 10;
+            position: absolute;
+            height: 50px;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+        }
+        .mole{
+            background-image: url(images/mole.jpeg)
+            background-size: cover;
+            z-index: 3;
+            position: absolute;
+            height: 250px;
+            top: 250px;
+            left: 0px;
+            width: 100%;
+            cursor: crosshair;
+        }
 
     </style>
 
@@ -44,19 +76,15 @@
     }
     
     function makeGameBoard(){
-       
         var moles = 8;
         var html = '';
-        for(var mole=0;mole>moles;mole++){
-            html
+        for(var mole=0;mole<moles;mole++){
+            html+='<div class="hole hole'+mole+'"><div class="mole"></div>';
+            html+='<div class="dirt"></div></div>';
         }
-        
-        $('.game').html(html);
-        
+        $('.game').html(html);   
     }
     
-    //pieces
-    //finish loop for gameplay
 
 </script>
 </body>
