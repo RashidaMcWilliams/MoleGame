@@ -27,7 +27,7 @@
             width: 100%;
         }
         .mole{
-            background-image: url(images/mole.jpeg)
+            background-image: url(images/mole.sm.jpeg);
             background-size: cover;
             z-index: 3;
             position: absolute;
@@ -63,7 +63,7 @@
         makeGameBoard();
         score=0;
         $('.score').text(score);
-        //start gameplay
+       startMoles();
         gameover = false;
         setTimeout(function(){
           return gameend();
