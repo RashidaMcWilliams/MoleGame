@@ -63,11 +63,32 @@
         makeGameBoard();
         score=0;
         $('.score').text(score);
-       startMoles();
+        startMoles();
         gameover = false;
         setTimeout(function(){
           return gameend();
         },5000);
+    }
+    
+    function randomHole(){
+        var hole=Math.floor(Math.random()*$('>.hole').length);
+        return hole;
+        console.log(hole);
+    }
+    
+    function startMoles(){
+        var jumpUp = $('.hole'+randomHole() + '.mole');
+        jumpUp.show();
+        jumpUp.animate({
+            top:'50px'
+        },1000);
+        console.log(jumpUp);
+        setTimeout(function(){
+            jumpUp.animate({
+                top:'250px'
+            },1000);
+            startMoles();
+        },1000);
     }
 
     function gameend(){
